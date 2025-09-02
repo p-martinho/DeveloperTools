@@ -1,0 +1,11 @@
+# TODO
+- README
+- Remove the Microsoft.NET.Test.Sdk package and check if the tests are not marked as unused and if code coverage works (wait for Rider fix)
+- Update to .NET 10 (when stable)
+    - Check .slnx file is better supported (not preview anymore, the template engine supports it, etc.)
+    - Update the tests for MTP mode:
+        - https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test#microsofttestingplatform-mtp-mode-of-dotnet-test (removing, for instance, <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport> may not be possible with Rider)
+        - https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-test?tabs=dotnet-test-with-mtp#vstest-and-microsofttestingplatform-mtp
+    - Update Github flow (change the SDK version, dotnet test command, etc.)
+- Update dependencies
+- Pipeline to pack and publish
