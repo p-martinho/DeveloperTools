@@ -1,5 +1,35 @@
+[![NuGet](https://img.shields.io/nuget/v/PMart.DeveloperTools.CoreMask.svg)](https://www.nuget.org/packages/PMart.DeveloperTools.CoreMask)
+[![NuGet](https://img.shields.io/nuget/dt/PMart.DeveloperTools.CoreMask.svg)](https://www.nuget.org/packages/PMart.DeveloperTools.CoreMask)
+[![Build status](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yml)](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yml/badge.svg)
+
+# PMart.DeveloperTools
+
+This set of libraries and applications provides different tools useful for the developers. The tools can also be used in .NET applications.
+
+## NuGet Packages
+
+[__PMart.DeveloperTools.CoreMask__](./src/CoreMask/README.md): Tools related with core masking.
+[![NuGet](https://img.shields.io/nuget/v/PMart.DeveloperTools.CoreMask.svg)](https://www.nuget.org/packages/PMart.DeveloperTools.CoreMask)
+
+# Installation
+
+Install one or more of the available NuGet packages in your project.
+
+Use your IDE or the command:
+```bash
+dotnet add package <PACKAGE_NAME>
+```
+
+# Usage
+
+For specific usage details, read the documentation of the tools you want to use:
+
+- [CoreMask](./src/CoreMask/README.md)
+
+
+
 # TODO
-- README
+
 - Remove the Microsoft.NET.Test.Sdk package and check if the tests are not marked as unused and if code coverage works (wait for Rider fix)
 - Update to .NET 10 (when stable)
     - Check .slnx file is better supported (not preview anymore, the template engine supports it, etc.)
