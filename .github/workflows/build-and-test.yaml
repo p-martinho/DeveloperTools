@@ -11,7 +11,6 @@ on:
   workflow_dispatch:
 
 env:
-  DOTNET_VERSION: 9.0.x
   BuildConfiguration: Release
   SolutionFile: DeveloperTools.sln
   TestResultsDirectory: TestResults
@@ -28,7 +27,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
+          global-json-file: global.json
       
       - name: Restore dependencies
         run: dotnet restore ${{ env.SolutionFile }}

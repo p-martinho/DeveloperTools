@@ -3,11 +3,6 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
 
-        <PackageId>PMart.CoreMask.App</PackageId>
-        <AssemblyName>$(PackageId)</AssemblyName>
-        <RootNamespace>$(PackageId)</RootNamespace>
-
-        <Title>$(PackageId)</Title>
         <Description>Library with tools related with core masks (selection of CPU cores).</Description>
         <PackageTags>tool;coremask</PackageTags>
     </PropertyGroup>
