@@ -10,13 +10,13 @@ internal static class CoreMaskHelper
     /// <summary>
     /// Build the core mask from the core numbers provided.
     /// </summary>
-    /// <param name="cores">The core numbers to add to the mask.</param>
+    /// <param name="coreNumbers">The core numbers to add to the mask.</param>
     /// <returns>The core mask.</returns>
-    public static Models.CoreMask BuildCoreMask(IEnumerable<ushort> cores)
+    public static Models.CoreMask BuildCoreMask(IEnumerable<ushort> coreNumbers)
     {
         var coreMaskNumber = BigInteger.Zero;
 
-        foreach (var core in cores)
+        foreach (var core in coreNumbers)
         {
             var bitToSet = BigInteger.One << core;
     

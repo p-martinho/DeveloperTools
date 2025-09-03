@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\src\CoreMask\CoreMask.App\CoreMask.App.csproj"/>
+        <ProjectReference Include="..\..\src\CoreMask.App\CoreMask.App.csproj"/>
     </ItemGroup>
 
 </Project>

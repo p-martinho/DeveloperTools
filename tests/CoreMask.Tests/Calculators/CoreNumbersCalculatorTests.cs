@@ -36,7 +36,7 @@ public class CoreNumbersCalculatorTests
         _inputParser.ParseInputToCoreMask(input).Returns(coreMask);
 
         // Act
-        var result = _calculator.CalculateCoreMask(input);
+        var result = _calculator.CalculateCoreNumbers(input);
 
         // Assert
         Assert.Null(result.ErrorMessage);
@@ -60,7 +60,7 @@ public class CoreNumbersCalculatorTests
         _inputValidator.ValidateInput(input).Returns(errorMessage);
 
         // Act
-        var result = _calculator.CalculateCoreMask(input);
+        var result = _calculator.CalculateCoreNumbers(input);
 
         // Assert
         Assert.Equal(errorMessage, result.ErrorMessage);
@@ -77,7 +77,7 @@ public class CoreNumbersCalculatorTests
         _inputParser.ParseInputToCoreMask(input).Returns((BigInteger?)null);
 
         // Act
-        var result = _calculator.CalculateCoreMask(input);
+        var result = _calculator.CalculateCoreNumbers(input);
 
         // Assert
         Assert.Equal(ParsingErrorMessage, result.ErrorMessage);
@@ -96,7 +96,7 @@ public class CoreNumbersCalculatorTests
         _inputParser.ParseInputToCoreMask(input).Returns(coreMask);
 
         // Act
-        var result = _calculator.CalculateCoreMask(input);
+        var result = _calculator.CalculateCoreNumbers(input);
 
         // Assert
         Assert.Contains(InvalidNumberErrorMessage, result.ErrorMessage);
@@ -113,7 +113,7 @@ public class CoreNumbersCalculatorTests
         _inputParser.ParseInputToCoreMask(input).Returns(BigInteger.One << CoreMaskConstants.MaxCoreNumber + 1);
 
         // Act
-        var result = _calculator.CalculateCoreMask(input);
+        var result = _calculator.CalculateCoreNumbers(input);
 
         // Assert
         Assert.Contains(MaxCoreNumberErrorMessage, result.ErrorMessage);

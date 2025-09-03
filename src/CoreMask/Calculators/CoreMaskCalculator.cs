@@ -47,8 +47,14 @@ internal class CoreMaskCalculator : ICoreMaskCalculator
         {
             return new CalculatorResult(errorMessage: ParsingErrorMessage);
         }
-        
-        cores = cores.Distinct().OrderBy(c => c).ToList();
+
+        return CalculateCoreMask(cores);
+    }
+
+    /// <inheritdoc />
+    public CalculatorResult CalculateCoreMask(IEnumerable<ushort> coreNumbers)
+    {
+        var cores = coreNumbers.Distinct().OrderBy(c => c).ToList();
 
         if (cores.Count > CoreMaskConstants.MaxNumberOfCores)
         {

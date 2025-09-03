@@ -13,4 +13,11 @@ public interface ICoreMaskCalculator
     /// <param name="input">The input.</param>
     /// <returns>The result.</returns>
     public CalculatorResult CalculateCoreMask(string? input);
+    
+    /// <summary>
+    /// Calculates the core mask from the provided core numbers.
+    /// </summary>
+    /// <param name="coreNumbers">The core numbers to add to the mask.</param>
+    /// <returns>The result.</returns>
+    public CalculatorResult CalculateCoreMask(IEnumerable<ushort> coreNumbers);
 }

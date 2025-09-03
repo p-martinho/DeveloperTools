@@ -76,7 +76,7 @@ static CalculatorResult CalculateCoreNumbersFromMask(ICoreNumbersCalculator calc
 
     var input = Console.ReadLine();
 
-    return calculator.CalculateCoreMask(input);
+    return calculator.CalculateCoreNumbers(input);
 }
 
 static void PrintResult(CalculatorResult result)
@@ -88,7 +88,7 @@ static void PrintResult(CalculatorResult result)
     }
         
     Console.WriteLine($"Core mask for {result.CoreNumbers.Count()} core(s): {string.Join(", ", result.CoreNumbers)}");
-    Console.WriteLine($"Core mask (decimal): {result.CoreMask!.CoreMaskAsDecimal}");
-    Console.WriteLine($"Core mask (hex): {result.CoreMask.CoreMaskAsHexadecimal}");
-    Console.WriteLine($"Core mask (binary): {result.CoreMask.CoreMaskAsBinary}");
+    Console.WriteLine($"Core mask (decimal): {result.CoreMask!.GetCoreMaskAsDecimal()}");
+    Console.WriteLine($"Core mask (hex): {result.CoreMask.GetCoreMaskAsHexadecimal()}");
+    Console.WriteLine($"Core mask (binary): {result.CoreMask.GetCoreMaskAsBinary()}");
 }

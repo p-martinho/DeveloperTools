@@ -33,7 +33,7 @@ internal class CoreNumbersCalculator : ICoreNumbersCalculator
     }
 
     /// <inheritdoc />
-    public CalculatorResult CalculateCoreMask(string? input)
+    public CalculatorResult CalculateCoreNumbers(string? input)
     {
         var inputError = _inputValidator.ValidateInput(input);
 
@@ -49,6 +49,12 @@ internal class CoreNumbersCalculator : ICoreNumbersCalculator
             return new CalculatorResult(errorMessage: ParsingErrorMessage);
         }
         
+        return CalculateCoreNumbers(coreMaskNumber.Value);
+    }
+
+    /// <inheritdoc />
+    public CalculatorResult CalculateCoreNumbers(BigInteger coreMaskNumber)
+    {
         if (coreMaskNumber <= 0)
         {
             return new CalculatorResult(errorMessage: InvalidNumberErrorMessage);
@@ -59,8 +65,8 @@ internal class CoreNumbersCalculator : ICoreNumbersCalculator
             return new CalculatorResult(errorMessage: MaxCoreNumberErrorMessage);
         }
 
-        var cores = CoreMaskHelper.GetCoreNumbers(coreMaskNumber.Value);
+        var cores = CoreMaskHelper.GetCoreNumbers(coreMaskNumber);
 
-        return new CalculatorResult(new Models.CoreMask(coreMaskNumber.Value), cores);
+        return new CalculatorResult(new Models.CoreMask(coreMaskNumber), cores);
     }
 }
