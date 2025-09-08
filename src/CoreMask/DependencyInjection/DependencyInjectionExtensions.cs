@@ -1,9 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
-using PMart.CoreMask.Calculators;
-using PMart.CoreMask.Parsers;
-using PMart.CoreMask.Validators;
+using PMart.DeveloperTools.CoreMask.Calculators;
+using PMart.DeveloperTools.CoreMask.Parsers;
+using PMart.DeveloperTools.CoreMask.Validators;
 
-namespace PMart.CoreMask.DependencyInjection;
+namespace PMart.DeveloperTools.CoreMask.DependencyInjection;
 
 /// <summary>
 /// The dependency injection extensions.

@@ -1,4 +1,4 @@
-﻿namespace PMart.CoreMask.Parsers;
+﻿namespace PMart.DeveloperTools.CoreMask.Parsers;
 
 /// <summary>
 /// The core numbers input parser.

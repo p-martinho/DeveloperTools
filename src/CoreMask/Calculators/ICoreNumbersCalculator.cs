@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
-using PMart.CoreMask.Models;
+using PMart.DeveloperTools.CoreMask.Models;
 
-namespace PMart.CoreMask.Calculators;
+namespace PMart.DeveloperTools.CoreMask.Calculators;
 
 /// <summary>
 /// The interface for the core numbers calculator.

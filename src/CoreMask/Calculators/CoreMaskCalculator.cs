@@ -1,10 +1,10 @@
-﻿using PMart.CoreMask.Constants;
-using PMart.CoreMask.Helpers;
-using PMart.CoreMask.Models;
-using PMart.CoreMask.Parsers;
-using PMart.CoreMask.Validators;
+﻿using PMart.DeveloperTools.CoreMask.Constants;
+using PMart.DeveloperTools.CoreMask.Helpers;
+using PMart.DeveloperTools.CoreMask.Models;
+using PMart.DeveloperTools.CoreMask.Parsers;
+using PMart.DeveloperTools.CoreMask.Validators;
 
-namespace PMart.CoreMask.Calculators;
+namespace PMart.DeveloperTools.CoreMask.Calculators;
 
 /// <summary>
 /// The core mask calculator.

@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
-using PMart.CoreMask.Helpers;
+using PMart.DeveloperTools.CoreMask.Helpers;
 
-namespace PMart.CoreMask.Tests.Helpers;
+namespace CoreMask.Tests.Helpers;
 
 public class CoreMaskHelperTests
 {

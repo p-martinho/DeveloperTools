@@ -1,4 +1,4 @@
-﻿namespace PMart.CoreMask.Constants;
+﻿namespace PMart.DeveloperTools.CoreMask.Constants;
 
 /// <summary>
 /// The core mask constants.

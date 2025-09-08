@@ -1,6 +1,6 @@
-﻿using PMart.CoreMask.Validators;
+﻿using PMart.DeveloperTools.CoreMask.Validators;
 
-namespace PMart.CoreMask.Tests.Validators;
+namespace CoreMask.Tests.Validators;
 
 public class CoreMaskInputValidatorTests
 {

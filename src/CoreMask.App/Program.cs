@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PMart.CoreMask.Calculators;
-using PMart.CoreMask.DependencyInjection;
-using PMart.CoreMask.Models;
+using PMart.DeveloperTools.CoreMask.Calculators;
+using PMart.DeveloperTools.CoreMask.DependencyInjection;
+using PMart.DeveloperTools.CoreMask.Models;
 
 try
 {

@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace PMart.CoreMask.Parsers;
+namespace PMart.DeveloperTools.CoreMask.Parsers;
 
 /// <summary>
 /// The core mask input parser.

@@ -1,4 +1,4 @@
-﻿using PMart.CoreMask.Calculators;
+﻿using PMart.DeveloperTools.CoreMask.Calculators;
 
 namespace CoreMask.Sample;
 

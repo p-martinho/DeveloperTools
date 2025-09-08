@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace PMart.CoreMask.Models;
+namespace PMart.DeveloperTools.CoreMask.Models;
 
 /// <summary>
 /// The core mask.

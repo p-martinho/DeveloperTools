@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace PMart.CoreMask.Validators;
+namespace PMart.DeveloperTools.CoreMask.Validators;
 
 /// <summary>
 /// The core numbers input validator.

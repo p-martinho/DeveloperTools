@@ -1,4 +1,4 @@
-﻿namespace PMart.CoreMask.Validators;
+﻿namespace PMart.DeveloperTools.CoreMask.Validators;
 
 /// <summary>
 /// The interface for the core mask input validator.

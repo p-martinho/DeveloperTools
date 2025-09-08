@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace PMart.CoreMask.Helpers;
+namespace PMart.DeveloperTools.CoreMask.Helpers;
 
 /// <summary>
 /// The core mask helper.

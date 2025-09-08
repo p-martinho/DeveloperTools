@@ -1,6 +1,6 @@
-﻿using PMart.CoreMask.Parsers;
+﻿using PMart.DeveloperTools.CoreMask.Parsers;
 
-namespace PMart.CoreMask.Tests.Parsers;
+namespace CoreMask.Tests.Parsers;
 
 public class CoreNumbersInputParserTests
 {

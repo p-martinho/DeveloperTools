@@ -1,11 +1,11 @@
 ﻿using System.Numerics;
 using NSubstitute;
-using PMart.CoreMask.Calculators;
-using PMart.CoreMask.Constants;
-using PMart.CoreMask.Parsers;
-using PMart.CoreMask.Validators;
+using PMart.DeveloperTools.CoreMask.Calculators;
+using PMart.DeveloperTools.CoreMask.Constants;
+using PMart.DeveloperTools.CoreMask.Parsers;
+using PMart.DeveloperTools.CoreMask.Validators;
 
-namespace PMart.CoreMask.Tests.Calculators;
+namespace CoreMask.Tests.Calculators;
 
 public class CoreMaskCalculatorTests
 {

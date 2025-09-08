@@ -4,7 +4,7 @@
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))"/>
 
     <PropertyGroup>
-        <PackageId>$(Company).$(MSBuildProjectName)</PackageId>
+        <PackageId>$(Company).DeveloperTools.$(MSBuildProjectName)</PackageId>
         <AssemblyName>$(PackageId)</AssemblyName>
         <RootNamespace>$(PackageId)</RootNamespace>
 
