@@ -16,7 +16,7 @@ internal class CoreMaskInputParser : ICoreMaskInputParser
             return null;
         }
 
-        if (!BigInteger.TryParse(input.Trim(), out var coreMask))
+        if (!BigInteger.TryParse(input.AsSpan().Trim(), out var coreMask))
         {
             return null;
         }

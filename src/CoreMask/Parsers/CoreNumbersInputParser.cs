@@ -16,50 +16,50 @@ internal class CoreNumbersInputParser : ICoreNumbersInputParser
 
         var cores = new List<ushort>();
 
-        var coresSubstrings = input.Split(',');
+        var inputSpan = input.AsSpan();
 
-        foreach (var substring in coresSubstrings)
+        var coresSubstrings = inputSpan.Split(',');
+
+        foreach (var segment in coresSubstrings)
         {
-            var parsedCores = ParseSubstring(substring);
+            var parsedCores = ParseSubstring(inputSpan[segment]);
 
             if (parsedCores is null)
             {
                 return null;
             }
-            
+
             cores.AddRange(parsedCores);
         }
-        
+
         return cores;
     }
 
-    private static List<ushort>? ParseSubstring(string substring)
+    private static List<ushort>? ParseSubstring(ReadOnlySpan<char> substringSpan)
     {
-        if (string.IsNullOrWhiteSpace(substring))
+        if (substringSpan.IsEmpty || substringSpan.IsWhiteSpace())
         {
             return null;
         }
 
-        var hyphensCount = substring.Count(s => s == '-');
+        var hyphensCount = substringSpan.Count('-');
 
         if (hyphensCount > 1)
         {
             return null;
         }
-        
+
         if (hyphensCount == 1)
         {
-            return ParseGroup(substring);
+            return ParseGroup(substringSpan);
         }
-        
-        return ushort.TryParse(substring, out var core) ? [core] : null;
+
+        return ushort.TryParse(substringSpan, out var core) ? [core] : null;
     }
 
-    private static List<ushort>? ParseGroup(string group)
+    private static List<ushort>? ParseGroup(ReadOnlySpan<char> groupSpan)
     {
         var cores = new List<ushort>();
-
-        var groupSpan = group.AsSpan();
 
         // Parse the first number (before '-')
         if (!ushort.TryParse(groupSpan[..groupSpan.IndexOf('-')], out var firstCore))
@@ -75,7 +75,7 @@ internal class CoreNumbersInputParser : ICoreNumbersInputParser
 
         var minCore = Math.Min(firstCore, lastCore);
         var maxCore = Math.Max(firstCore, lastCore);
-        
+
         for (var c = minCore; c <= maxCore; c++)
         {
             cores.Add(c);
@@ -86,7 +86,7 @@ internal class CoreNumbersInputParser : ICoreNumbersInputParser
             // Keep it unordered
             cores.Reverse();
         }
-        
+
         return cores;
     }
 }
