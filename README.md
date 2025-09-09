@@ -4,7 +4,7 @@
 
 # PMart.DeveloperTools
 
-This set of libraries and applications provides different tools useful for the developers. The tools can also be used in .NET applications.
+This set of libraries and applications provides different simple tools that may be useful for developers. The tools can also be used in .NET applications, they are available as NuGet packages.
 
 ## NuGet Packages
 
