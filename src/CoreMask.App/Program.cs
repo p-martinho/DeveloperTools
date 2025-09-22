@@ -6,12 +6,12 @@ using PMart.DeveloperTools.CoreMask.Models;
 try
 {
     Console.WriteLine("Core Mask App");
-    
+
     var serviceProvider = CreateServices();
-    
+
     var coreMaskCalculator = serviceProvider.GetRequiredService<ICoreMaskCalculator>();
     var coreNumbersCalculator = serviceProvider.GetRequiredService<ICoreNumbersCalculator>();
-    
+
     while (true)
     {
         Console.WriteLine();
@@ -41,7 +41,7 @@ try
                 Console.WriteLine("Invalid choice. Please enter 1, 2 or 3.");
                 continue;
         }
-        
+
         PrintResult(result);
     }
 }
@@ -55,7 +55,7 @@ catch (Exception e)
 static ServiceProvider CreateServices()
 {
     var services = new ServiceCollection();
-        
+
     services.AddCoreMaskTools();
 
     return services.BuildServiceProvider();
@@ -66,13 +66,13 @@ static CalculatorResult CalculateMaskFromCores(ICoreMaskCalculator calculator)
     Console.WriteLine("What cores to use?");
 
     var input = Console.ReadLine();
-    
+
     return calculator.CalculateCoreMask(input);
 }
 
 static CalculatorResult CalculateCoreNumbersFromMask(ICoreNumbersCalculator calculator)
 {
-    Console.WriteLine("What is the core mask?");
+    Console.WriteLine("What is the core mask? (in decimal format or hexadecimal format using prefix 0x)");
 
     var input = Console.ReadLine();
 
@@ -86,7 +86,7 @@ static void PrintResult(CalculatorResult result)
         Console.WriteLine(result.ErrorMessage);
         return;
     }
-        
+
     Console.WriteLine($"Core mask for {result.CoreNumbers.Count()} core(s): {string.Join(", ", result.CoreNumbers)}");
     Console.WriteLine($"Core mask (decimal): {result.CoreMask!.GetCoreMaskAsDecimal()}");
     Console.WriteLine($"Core mask (hex): {result.CoreMask.GetCoreMaskAsHexadecimal()}");
