@@ -26,6 +26,7 @@ public class CoreMaskInputParserTests
     [InlineData(" ")]
     [InlineData("A")]
     [InlineData("0x")]
+    [InlineData("0xG")]
     public void ParseInputToCoreMask_WhenInvalidInput_ShouldReturnNull(string? input)
     {
         // Arrange
