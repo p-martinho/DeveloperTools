@@ -9,7 +9,6 @@ on:
   workflow_dispatch:
 
 env:
-  DOTNET_VERSION: 9.0.x
   BuildConfiguration: Release
   ProjectFile: CoreMask.csproj
   PackageName: PMart.CoreMask.*.nupkg
@@ -26,10 +25,12 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
+          global-json-file: global.json
       
       - name: Pack
         run: dotnet pack ${{ env.ProjectFile }} --configuration ${{ env.BuildConfiguration }}
 
       - name: Publish to nuget.org
-        run: dotnet nuget push ./**/${{ env.PackageName }} --source ${{ env.NuGetUrl }} --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate --no-symbols
+        run: dotnet nuget push ./**/${{ env.PackageName }} --source ${{ env.NuGetUrl }} --api-key $NUGET_AUTH_TOKEN --skip-duplicate --no-symbols
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY }}

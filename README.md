@@ -26,16 +26,28 @@ For specific usage details, read the documentation of the tools you want to use:
 
 - [CoreMask](./src/CoreMask/README.md)
 
+# Unit Tests and Code Coverage
 
+For unit testing, the solution uses the XUnit v3 framework, with the Microsoft Testing Platform (MTP) v2 enabled.
 
-# TODO
+To run the unit tests and assess the code coverage, and if your IDE does not have a tool for it, follow these instructions:
 
-- Remove the Microsoft.NET.Test.Sdk package and check if the tests are not marked as unused and if code coverage works (wait for Rider fix)
-- Update to .NET 10 (when stable)
-    - Update the tests for MTP mode:
-        - https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test#microsofttestingplatform-mtp-mode-of-dotnet-test (removing, for instance, <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport> may not be possible with Rider)
-        - https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-test?tabs=dotnet-test-with-mtp#vstest-and-microsofttestingplatform-mtp
-        - Update Github flow (dotnet test command)
-    - "allowPrerelease": false in global.json, when .NET 10 is no longer preview
-- Update dependencies
-- Pipeline to pack and publish
+1. Install (if not already) the **ReportGenerator** tool:
+
+    ``` bash
+    dotnet tool install dotnet-reportgenerator-globaltool --global
+    ```
+
+2. Run the tests with code coverage enabled. Run this command in the **root folder** of the solution:
+
+    ``` bash
+    dotnet test --solution DeveloperTools.sln --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml --coverage-settings ./tests/CodeCoverage-settings.xml
+    ```
+
+3. Use the **ReportGenerator** tool to create HTML from the XML coverage files. Run this command in the **root folder** of the solution:
+
+    ``` bash
+    ReportGenerator -reports:**/coverage.cobertura.xml -targetdir:CoverageReport
+    ```
+
+4. Open the HTML file `CoverageReport\index.html` to see the results.
