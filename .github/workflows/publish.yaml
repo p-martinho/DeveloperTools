@@ -1,4 +1,4 @@
-name: Publish Template
+name: Publish to NuGet
 
 on:
   push:
