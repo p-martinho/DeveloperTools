@@ -1,0 +1,26 @@
+<Solution>
+  <Folder Name="/Documentation/">
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Modules/">
+    <File Path="src/Directory.Build.props" />
+    <File Path="src/Directory.Build.targets" />
+    <Project Path="src/CoreMask.App/CoreMask.App.csproj" />
+    <Project Path="src/CoreMask/CoreMask.csproj" />
+  </Folder>
+  <Folder Name="/Samples/">
+    <File Path="samples/Directory.Build.props" />
+    <Project Path="samples/CoreMask.Sample/CoreMask.Sample.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="global.json" />
+    <File Path="icon.png" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <File Path="tests/Directory.Build.props" />
+    <Project Path="tests/CoreMask.Tests/CoreMask.Tests.csproj" />
+  </Folder>
+</Solution>
