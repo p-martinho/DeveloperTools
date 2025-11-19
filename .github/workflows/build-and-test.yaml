@@ -18,6 +18,9 @@ env:
 jobs:
   build:
 
+    permissions:
+      pull-requests: write
+
     runs-on: ubuntu-latest
 
     steps:
@@ -43,8 +46,6 @@ jobs:
 
       - name: Add comment to PR
         if: github.event_name == 'pull_request'
-        permissions:
-          pull-requests: write
         run: gh pr comment $PR_NUMBER --body-file ${{ env.CoverageReportDirectory }}/SummaryGithub.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
