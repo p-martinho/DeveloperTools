@@ -1,17 +1,17 @@
-name: Publish Template
+name: Publish to NuGet
 
 on:
   push:
     branches:
       - 'main'
     paths:
-      - 'CoreMask.csproj'
+      - '**/CoreMask.csproj'
   workflow_dispatch:
 
 env:
   BuildConfiguration: Release
-  ProjectFile: CoreMask.csproj
-  PackageName: PMart.CoreMask.*.nupkg
+  ProjectFile: ./src/CoreMask/CoreMask.csproj
+  PackageName: PMart.DeveloperTools.CoreMask.*.nupkg
   NuGetUrl: https://api.nuget.org/v3/index.json
 
 jobs:
