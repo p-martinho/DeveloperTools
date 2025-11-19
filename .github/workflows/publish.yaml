@@ -11,7 +11,7 @@ on:
 env:
   BuildConfiguration: Release
   ProjectFile: ./src/CoreMask/CoreMask.csproj
-  PackageName: PMart.CoreMask.*.nupkg
+  PackageName: PMart.DeveloperTools.CoreMask.*.nupkg
   NuGetUrl: https://api.nuget.org/v3/index.json
 
 jobs:
