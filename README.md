@@ -1,6 +1,6 @@
 [![NuGet](https://img.shields.io/nuget/v/PMart.DeveloperTools.CoreMask.svg)](https://www.nuget.org/packages/PMart.DeveloperTools.CoreMask)
 [![NuGet](https://img.shields.io/nuget/dt/PMart.DeveloperTools.CoreMask.svg)](https://www.nuget.org/packages/PMart.DeveloperTools.CoreMask)
-[![Build status](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yml)](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yml/badge.svg)
+[![Build status](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yaml)](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yml/badge.svg)
 
 # PMart.DeveloperTools
 
