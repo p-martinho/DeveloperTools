@@ -51,3 +51,5 @@ To run the unit tests and assess the code coverage, and if your IDE does not hav
     ```
 
 4. Open the HTML file `CoverageReport\index.html` to see the results.
+
+✅ The solution has **100%** code coverage.
