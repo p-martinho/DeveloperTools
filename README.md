@@ -41,7 +41,7 @@ To run the unit tests and assess the code coverage, and if your IDE does not hav
 2. Run the tests with code coverage enabled. Run this command in the **root folder** of the solution:
 
     ``` bash
-    dotnet test --solution DeveloperTools.sln --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml --coverage-settings ./tests/CodeCoverage-settings.xml
+    dotnet test --solution DeveloperTools.slnx --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml --coverage-settings ./tests/CodeCoverage-settings.xml
     ```
 
 3. Use the **ReportGenerator** tool to create HTML from the XML coverage files. Run this command in the **root folder** of the solution:

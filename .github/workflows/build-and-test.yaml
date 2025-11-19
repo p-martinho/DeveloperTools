@@ -12,7 +12,7 @@ on:
 
 env:
   BuildConfiguration: Release
-  SolutionFile: DeveloperTools.sln
+  SolutionFile: DeveloperTools.slnx
   CoverageReportDirectory: CoverageReport
 
 jobs:
