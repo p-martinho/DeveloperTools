@@ -5,12 +5,12 @@ on:
     branches:
       - 'main'
     paths:
-      - 'CoreMask.csproj'
+      - '**/CoreMask.csproj'
   workflow_dispatch:
 
 env:
   BuildConfiguration: Release
-  ProjectFile: CoreMask.csproj
+  ProjectFile: ./src/CoreMask/CoreMask.csproj
   PackageName: PMart.CoreMask.*.nupkg
   NuGetUrl: https://api.nuget.org/v3/index.json
 
