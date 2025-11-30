@@ -2,7 +2,8 @@ name: Build and Test
 
 on:
   push:
-    branches: 
+    branches:
+      - 'main'
       - 'develop'
   pull_request:
     branches:
@@ -24,25 +25,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
-      
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
           global-json-file: global.json
-      
+
       - name: Restore dependencies
         run: dotnet restore ${{ env.SolutionFile }}
-      
+
       - name: Build
         run: dotnet build ${{ env.SolutionFile }} --configuration ${{ env.BuildConfiguration }} --no-restore
-      
+
       - name: Test
         run: dotnet test --solution ${{ env.SolutionFile }} --configuration ${{ env.BuildConfiguration }} --no-restore --no-build --ignore-exit-code 8 --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml --coverage-settings ./tests/CodeCoverage-settings.xml
 
       - name: Create code coverage report
-        run: |
-          dotnet tool exec dotnet-reportgenerator-globaltool --yes -reports:**/coverage.cobertura.xml -targetdir:${{ env.CoverageReportDirectory }} -reporttypes:MarkdownSummaryGithub
+        run: dotnet tool exec dotnet-reportgenerator-globaltool --yes -reports:**/coverage.cobertura.xml -targetdir:${{ env.CoverageReportDirectory }} -reporttypes:MarkdownSummaryGithub
 
       - name: Add comment to PR
         if: github.event_name == 'pull_request'
@@ -50,6 +51,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
-    
+
       - name: Publish coverage in build summary
         run: cat ${{ env.CoverageReportDirectory }}/SummaryGithub.md >> $GITHUB_STEP_SUMMARY

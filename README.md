@@ -1,6 +1,7 @@
 [![NuGet](https://img.shields.io/nuget/v/PMart.DeveloperTools.CoreMask.svg)](https://www.nuget.org/packages/PMart.DeveloperTools.CoreMask)
 [![NuGet](https://img.shields.io/nuget/dt/PMart.DeveloperTools.CoreMask.svg)](https://www.nuget.org/packages/PMart.DeveloperTools.CoreMask)
-[![Build status](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yaml/badge.svg)](https://github.com/p-martinho/DeveloperTools/actions/workflows/publish.yaml)
+[![Build and Test](https://github.com/p-martinho/DeveloperTools/actions/workflows/build-and-test.yaml/badge.svg)](https://github.com/p-martinho/DeveloperTools/actions/workflows/build-and-test.yaml)
+[![CodeQL Analysis](https://github.com/p-martinho/DeveloperTools/actions/workflows/codeql-analysis.yaml/badge.svg)](https://github.com/p-martinho/DeveloperTools/actions/workflows/codeql-analysis.yaml)
 
 # PMart.DeveloperTools
 
