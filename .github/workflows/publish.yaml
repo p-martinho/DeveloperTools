@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - '**/CoreMask.csproj'
   workflow_dispatch:
 
 env:
@@ -20,13 +18,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
-      
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
           global-json-file: global.json
-      
+
       - name: Pack
         run: dotnet pack ${{ env.ProjectFile }} --configuration ${{ env.BuildConfiguration }}
 
